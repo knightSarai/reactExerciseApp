@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 
-import CoinApp from './apps/coinFliper/CoinApp'
+import RandColorApp from './apps/randomColors/RandColApp'
 
 import './App.css'
 export default class App extends Component {
   render() {
     return (
       <div className="App">
-        <CoinApp/>
+        <RandColorApp/>
       </div>
     )
   }
