@@ -22,19 +22,13 @@ export default class CoinApp extends Component {
 
     flipCoin() {
         const rand = this.randNum()
-        if (rand === 1) {
-            this.setState(curState => ({
-                totalFlips: curState.totalFlips +1,
-                headScore: curState.headScore + 1,
-                face: curState.face = 1
-            }))
-        } else if (rand === 2) {
-            this.setState(curState => ({
-                totalFlips: curState.totalFlips +1,
-                tailScore: curState.tailScore + 1,
-                face: curState.face = 2
-            }))
-        }
+        this.setState(curState => ({
+            totalFlips: curState.totalFlips +1,
+            headScore:  curState.headScore + (rand === 1 ? 1 : 0),
+            tailScore:  curState.tailScore + (rand === 2 ? 1 : 0),
+            face : rand === 1 ? 1 : 2
+         })
+        )
     }
 
     randNum () {
